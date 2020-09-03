@@ -1,0 +1,13 @@
+ORM operacijos su Eloquent Modeliais
+
+Dažnai naudojamos užklausos (čia tik schematinis atvaizdavimas, ne PHP kodas):
+Insert 						→ new Blogpost()->save();
+Select + where 				→ Blogpost::where('votes', '=', 100)->get(); 
+Select + where + limit 1 	→ Blogpost::where()->first();
+Select 						→ Blogpost::all();
+Select + where id 			→ Blogpost::find($id);
+Update 						→ Blogpost::find(); change field ; save();
+Update 						→ Blogpost::where()->update([]);
+Delete one 					→ Blogpost::destroy($id);	
+Delete one 					→ Blogpost::find($id)->delete();	
+Delete many (+ where)	→ Blogpost::where()->delete();
